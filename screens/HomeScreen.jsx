@@ -1,7 +1,7 @@
 import React from 'react'
 import {View, Text, Button, StyleSheet, Image} from 'react-native';
 
-const HomeScreen = ({navigation}) => {
+export const HomeScreen = ({navigation}) => {
   return (
       <View>
       <View
@@ -26,7 +26,7 @@ const HomeScreen = ({navigation}) => {
   );
 }
 
-export default HomeScreen;
+
 
 const styles = StyleSheet.create({
    sectionContainer: {

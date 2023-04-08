@@ -1,15 +1,8 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
-
 import React from 'react';
 import type {PropsWithChildren} from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import HomeScreen from './screens/HomeScreen';
+import {HomeScreen} from './screens/HomeScreen';
 import OnboardingScreen from './screens/OnboardingScreen';
 
 import {
@@ -29,38 +22,31 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import SplashScreen from './screens/SplashScreen';
 
 const Stack = createNativeStackNavigator();
 
 
 function App() {
+  
   const isDarkMode = useColorScheme() === 'dark';
 
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
   return (
-    <View>
-     <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}>
-        hgghghhjkjkjkkhj
-      </Text>
-    <StatusBar
-      barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-      backgroundColor={backgroundStyle.backgroundColor}
-    />
+   
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator initialRouteName="Splash">
+      <Stack.Screen
+          name="Splash"
+          component={SplashScreen}
+          options={{ headerShown: false }}
+        />
         <Stack.Screen name="Onboarding" component={OnboardingScreen} />
-        {/* <Stack.Screen name="Home" component={HomeScreen} /> */}
+      <Stack.Screen name="Home" component={HomeScreen} /> 
       </Stack.Navigator>
     </NavigationContainer>
-    </View>
   );
 }
 
