@@ -23,6 +23,8 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 import SplashScreen from './screens/SplashScreen';
+import { ProfileScreen } from './screens/ProfileScreen';
+import BottomNav from './screens/BottomNav';
 
 const Stack = createNativeStackNavigator();
 
@@ -43,8 +45,10 @@ function App() {
           component={SplashScreen}
           options={{ headerShown: false }}
         />
-        <Stack.Screen name="Onboarding" component={OnboardingScreen} />
-      <Stack.Screen name="Home" component={HomeScreen} /> 
+        <Stack.Screen name="Onboarding" component={OnboardingScreen} options={{ headerShown: false }}/>
+      <Stack.Screen name="Home" component={HomeScreen} options={{ headerShown: false }}/> 
+      <Stack.Screen name="Profile" component={ProfileScreen} options={{ headerShown: false }}/>
+      <Stack.Screen name="BottomNav" component={BottomNav} options={{ headerShown: false }}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

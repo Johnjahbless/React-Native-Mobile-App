@@ -20,7 +20,7 @@ const OnboardingScreen = ({ navigation }) => {
   };
   
   const handleDone = () => {
-    navigation.replace("Home")  
+    navigation.replace("BottomNav")  
   };
     
   
@@ -108,13 +108,13 @@ const styles = StyleSheet.create({
     paddingBottom: 50,
   },
   nextButton: {
-    backgroundColor: '#2196F3',
+    backgroundColor: '#505A8D',
     paddingHorizontal: 30,
     paddingVertical: 10,
     borderRadius: 20,
   },
   doneButton: {
-    backgroundColor: '#4CAF50',
+    backgroundColor: '#505A8D',
     paddingHorizontal: 30,
     paddingVertical: 10,
     borderRadius: 20,

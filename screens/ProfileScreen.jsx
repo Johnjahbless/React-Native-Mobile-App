@@ -1,14 +1,13 @@
 import React from 'react'
 import {View, Text, Button, StyleSheet, Image} from 'react-native';
-import MyFloatingButton from './FAB';
 
-export const HomeScreen = ({navigation}) => {
+export const ProfileScreen = ({navigation}) => {
   return (
       <View>
       <View
       style={styles.sectionContainer}>
       <Text
-           style={styles.sectionTitle}>Home Screen</Text>
+           style={styles.sectionTitle}>Profile Screen</Text>
       </View>
         <View
            style={{
